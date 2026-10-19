@@ -25,7 +25,7 @@ export default function MovieBooking({screenstyle,data, setData}) {
     <View style={screenstyle}>    
       <Text style={styles.label}>Choose Movie</Text>
       <Picker style={styles.textbox}
-        selectedValue={movieChoice}
+        selectedValue={data.movieTitle}
         onValueChange={(itemValue) => handleChangeMovieTitle(itemValue)}>
         { movieList.map((movie) => {
           return <Picker.Item label={movie.title} value={movie.title}/>
